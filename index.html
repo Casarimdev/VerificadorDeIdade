@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade</title>
     <link rel="stylesheet" href="style.css">
-    <script src="idade.js" defer></script>
+    <script src="verify.js" defer></script>
 </head>
+
 <body>
-    <h1>Verificador de idade</h1>
     <section class="container">
+        <h1>Verificador de idade</h1>
         <div class="box">
-            <h2>Ano de nascimento :<input type="number" style="margin-top: 30px;" id="year"></h2>
-
-            <h2>Sexo :<input type="radio" name="sex" style="margin-top: 30px;" value="False">Masculino 
-
-            <input type="radio" name="sex" value="True">Feminino
+            <h2>Ano de nascimento: <input type="number" id="year">
             </h2>
 
-            <input type="button" value="Verificar" onclick="Verificar()">
-    
-            <div class="img-text">
-                <h1 style="text-align: center; color: black; font-size: 2rem;" id="texto">
-                
+            <h2>
+                Sexo:<label for="masc"> <input type="radio" value="Masculino" name="sex" style="margin-left: 2vh;"
+                        id="masc" required>Masculino</label>
+
+                <label for="fem"><input type="radio" value="Feminino" name="sex" required
+                        style="margin-left: 2vh; margin-bottom: 3vh;" id="fem">Feminino</label>
+                <br>
+
+                <input type="button" value="Verificar" onclick="Verificar()" class="button">
+            </h2>
+
+            <div class="text-res">
+                <h1 id="res">
+
                 </h1>
-                <img src="" alt="" id="imguy">
+                <img src="imagens/" alt="imagens" id="imgres" style="padding-top: 2vh;">
             </div>
-            
         </div>
     </section>
 </body>
+
 </html>
